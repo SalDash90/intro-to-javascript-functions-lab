@@ -29,8 +29,8 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
-function isAdult (age) {
-    if (age >= 18) {
+function isAdult (number) {
+    if (number >= 18) {
         return 'Adult'
     } else {
         return 'Minor'
@@ -51,7 +51,15 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
+function isCharAVowel (char) {
+  if (char === 'a' ||char === 'u'|| char === 'o' ||char === 'i' ||char === 'e') {
 
+    return true
+  } else return false
+
+}
+
+console.log('Exercise 3 Result:', isCharAVowel("a"));
 
 /*
 Exercise 4: generateEmail()
@@ -104,7 +112,7 @@ function maxOfThree(a, b, c) {
 return Math.max (a, b, c)
 }
 
-console.log('Exercise 6 Result:', maxOfThree(17, 4, 9));
+console.log('Exercise 6 Result:', maxOfThree(5, 8, 10));
 
 /*
 Exercise 7: calculateTip()
@@ -140,7 +148,15 @@ Complete the exercise in the space below:
 
 // Define the convertTemperature function
 
-// console.log('Exercise 8 Result:', convertTemperature(32, "C")); check
+function convertTemperature (temperature, scale) {
+if (scale == 'F') {
+  return (temperature - 32) * 5/9
+} else if (scale == 'C') {
+  return (temperature * 9/5) + 32
+}
+}
+
+console.log('Exercise 8 Result:', convertTemperature(32, "F")); 
 
 /*
 Exercise 9: basicCalculator()
@@ -158,7 +174,17 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
+function basicCalculator (num1, num2, operation) {
 
+if (operation === 'add') {
+  return num1 + num2
+} else if (operation === 'subtract') {
+  return num1 - num2
+} else if (operation === 'multiply') {
+  return num1 * num2
+} else if (operation === 'divide') {
+  return num1 / num2
+}}
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
